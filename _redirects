@@ -1,10 +1,10 @@
-# Google Search Console verification (before SPA fallback)
+# Google Search Console verification file (must stay as static file)
 /google773113fb1962f76d.html  /google773113fb1962f76d.html  200
 
-# Admin panel
+# Admin UI
 /admin    /admin/index.html   200
 /admin/   /admin/index.html   200
 /admin/*  /admin/index.html   200
 
-# SPA clean URLs
+# SPA fallback
 /*    /index.html   200

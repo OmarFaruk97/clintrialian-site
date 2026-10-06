@@ -3,5 +3,6 @@ Allow: /
 
 Disallow: /thankyou
 Disallow: /notfound
+Disallow: /admin
 
-Sitemap: https://clintrialian.com/sitemap.xml
+Sitemap: https://clintrialian.netlify.app/sitemap.xml
