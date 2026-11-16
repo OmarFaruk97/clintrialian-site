@@ -1,10 +1,27 @@
-# Google Search Console verification (static file)
-/google773113fb1962f76d.html  /google773113fb1962f76d.html  200
+# ClinTrialian — Netlify redirects
+# Order matters: specific rules first, SPA fallback last.
+# Existing files are served automatically unless a rule uses !force.
 
-# Admin UI
-/admin    /admin/index.html   200
-/admin/   /admin/index.html   200
-/admin/*  /admin/index.html   200
+# --- SEO / verification (must not fall through to SPA) ---
+/google773113fb1962f76d.html   /google773113fb1962f76d.html   200
+/robots.txt                    /robots.txt                    200
+/sitemap.xml                   /sitemap.xml                   200
+/og-image.png                  /og-image.png                  200
 
-# SPA clean URLs
-/*    /index.html   200
+# --- Static assets ---
+/assets/*                      /assets/:splat                 200
+
+# --- Admin dashboard ---
+/admin                         /admin/index.html              200
+/admin/                        /admin/index.html              200
+/admin/*                       /admin/index.html              200
+
+# --- Optional clean URL aliases (trailing slash) ---
+/services                      /services/                     301
+/contact                       /contact/                      301
+/about                         /about/                        301
+/careers                       /careers/                      301
+/participate                   /participate/                  301
+
+# --- SPA fallback: all app routes → index.html ---
+/*                             /index.html                    200

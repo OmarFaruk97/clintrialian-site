@@ -1,9 +1,38 @@
+# ClinTrialian — Netlify configuration
+# https://docs.netlify.com/routing/redirects/
+
 [build]
   publish = "."
+
+# ----- Redirects (same order as _redirects) -----
 
 [[redirects]]
   from = "/google773113fb1962f76d.html"
   to = "/google773113fb1962f76d.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/og-image.png"
+  to = "/og-image.png"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
   status = 200
   force = false
 
@@ -13,9 +42,39 @@
   status = 200
 
 [[redirects]]
+  from = "/admin/"
+  to = "/admin/index.html"
+  status = 200
+
+[[redirects]]
   from = "/admin/*"
   to = "/admin/index.html"
   status = 200
+
+[[redirects]]
+  from = "/services"
+  to = "/services/"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact/"
+  status = 301
+
+[[redirects]]
+  from = "/about"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/careers"
+  to = "/careers/"
+  status = 301
+
+[[redirects]]
+  from = "/participate"
+  to = "/participate/"
+  status = 301
 
 [[redirects]]
   from = "/*"
@@ -49,3 +108,13 @@
   for = "/og-image.png"
   [headers.values]
     Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
