@@ -2,6 +2,28 @@
   publish = "."
 
 [[redirects]]
+  from = "/google773113fb1962f76d.html"
+  to = "/google773113fb1962f76d.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[headers]]
+  for = "/google773113fb1962f76d.html"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+    Cache-Control = "public, max-age=0, must-revalidate"
